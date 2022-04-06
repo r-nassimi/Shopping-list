@@ -43,7 +43,7 @@ button{
     border: none;
     border-radius: 5px;
     margin-top: 20px;
-    width: 100px;
+    width: 150%;
     height: 45px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -158,11 +158,19 @@ p{
     #how-much{
         width: 60vw;
     }
+    
+    .button{
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        margin-left: 50vw;
+    }
 
     button{
         display: flex;
-        width: 20vw;
-        font-size: 18px;
+        width: 18vw;
+        font-size: 14px;
+        font-weight: lighter;
     }
 
     .editContainer{
@@ -170,7 +178,7 @@ p{
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
     h1{
         font-size: 30px;
     }
@@ -196,9 +204,15 @@ p{
         width: 60vw;
     }
 
+    .button{
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
     button{
         display: flex;
-        width: 20vw;
+        width: 30vw;
         font-size: 14px;
     }
 
@@ -209,5 +223,45 @@ p{
     img{
         width: 20px;
         height: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    #where-spend{
+        width: 70vw
+    }
+
+    #how-much{
+        width: 70vw;
+    }
+
+    #all{
+        font-size: 20px;
+    }
+
+    .button{
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    button{
+        display: flex;
+        width: 30vw;
+        font-size: 14px;
+    }
+
+    .editContainer{
+        word-wrap: break-word;
+    }
+
+    img{
+        width: 25px;
+        height: 25px;
+    }
+
+    p{
+        font-size: 18px;
     }
 }

@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
-const {Schema} = mongoose;
+const { Schema } = mongoose;
 
 const taskSchema = new Schema({
   text: String,
-  date: String,
+  date: Date,
   cost: Number,
 });
 

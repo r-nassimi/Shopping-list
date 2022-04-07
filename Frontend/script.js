@@ -17,7 +17,7 @@ let currentDate = dateNow;
 
 const URL = 'http://localhost:8000';
 
-window.onload = async function init() {
+window.onload = async () =>{
   textInput = document.getElementById('where-spend');
   costInput = document.getElementById('how-much');
   textInput.addEventListener('change', updateText);
@@ -38,7 +38,7 @@ onClickButton = async () => {
   if (textValue && costValue) {
     pushShops();
   } else {
-    alert('Input something!')
+    alert('Input something!');
   }
 }
 
@@ -62,8 +62,7 @@ const pushShops = async () => {
     textValue = '';
     costValue = '';
     render();
-    console.log
-  })
+  });
 }
 
 const updateText = (event) => {
@@ -90,7 +89,6 @@ render = () => {
   while (content.firstChild) {
     content.removeChild(content.firstChild);
   }
-
   let startValue = 0;
   let checkReduce = allShops.reduce(function (sum, currentSum) {
     return sum + currentSum.cost
@@ -100,11 +98,9 @@ render = () => {
     const container = document.createElement('div');
     container.id = `shop-${_id}`;
     container.className = 'cost-container';
-
     const list = document.createElement('p');
     list.innerText = _id + 1 + ")";
     container.appendChild(list);
-
     const editContainer = document.createElement('div');
     editContainer.className = 'editContainer';
 
@@ -155,8 +151,8 @@ render = () => {
     if (item._id === activeEdit) {
       const imageDone = document.createElement('img');
       imageDone.src = "http://cdn.onlinewebfonts.com/svg/img_327356.png";
-      imageDone.onclick = function () {
-        editValue(item._id, item.text, item.date, item.cost);
+      imageDone.onclick = function() {
+        editValue(_id, itemText, itemDate, itemCost);
         doneEdit();
       }
       editContainer.appendChild(imageDone);
